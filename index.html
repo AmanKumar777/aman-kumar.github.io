@@ -35,7 +35,6 @@
     -webkit-font-smoothing: antialiased;
     position: relative;
   }
-  /* Grid background */
   body::before {
     content: '';
     position: fixed;
@@ -48,7 +47,6 @@
     z-index: 0;
     mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
   }
-  /* Noise overlay */
   body::after {
     content: '';
     position: fixed;
@@ -66,8 +64,6 @@
     position: relative;
     z-index: 2;
   }
-
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -128,8 +124,6 @@
   @media (max-width: 720px) {
     .nav-links { display: none; }
   }
-
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -218,8 +212,6 @@
     background: transparent;
     color: var(--accent);
   }
-
-  /* Terminal card */
   .terminal {
     margin-top: 48px;
     background: var(--bg-2);
@@ -260,8 +252,6 @@
     vertical-align: middle;
   }
   @keyframes blink { 50% { opacity: 0; } }
-
-  /* SECTIONS */
   section { padding: 100px 0; position: relative; }
   .section-head {
     display: flex;
@@ -286,8 +276,6 @@
     background: linear-gradient(90deg, var(--line-2), transparent);
     margin-left: 16px;
   }
-
-  /* ABOUT */
   .about-grid {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
@@ -340,8 +328,6 @@
     font-weight: 700;
     font-size: 18px;
   }
-
-  /* EXPERIENCE */
   .timeline {
     position: relative;
     padding-left: 32px;
@@ -404,8 +390,6 @@
     color: var(--accent);
   }
   .exp-list li strong { color: var(--text); font-weight: 500; }
-
-  /* SKILLS */
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -471,8 +455,6 @@
     border-color: var(--accent);
     color: var(--accent);
   }
-
-  /* PROJECTS */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -553,8 +535,6 @@
     padding: 4px 8px;
     border-radius: 3px;
   }
-
-  /* EDUCATION + ACHIEVEMENTS */
   .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -603,8 +583,6 @@
     color: var(--accent);
     font-size: 14px;
   }
-
-  /* CONTACT */
   .contact {
     text-align: center;
     padding: 120px 0;
@@ -633,8 +611,6 @@
     gap: 16px;
     flex-wrap: wrap;
   }
-
-  /* FOOTER */
   footer {
     border-top: 1px solid var(--line);
     padding: 32px 0;
@@ -649,8 +625,6 @@
     flex-wrap: wrap;
     gap: 16px;
   }
-
-  /* Reveal animation */
   .reveal {
     opacity: 0;
     transform: translateY(24px);
@@ -674,13 +648,13 @@
       <li><a href="#about">about</a></li>
       <li><a href="#experience">experience</a></li>
       <li><a href="#skills">skills</a></li>
-      <li><a href="#projects">projects</a></li>
+      <li><a href="#projects">work</a></li>
+      <li><a href="#personal">personal</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- HERO -->
 <header class="hero">
   <div class="container hero-content">
     <div class="hero-meta">Backend Engineer · India · Open to opportunities</div>
@@ -689,7 +663,7 @@
     <p class="hero-desc">
       Backend Engineer (<strong>SDE-2</strong>) with <strong>4+ years</strong> shipping production systems
       in fintech & identity-verification. Specialized in <strong>Python · FastAPI · MongoDB · AWS</strong>,
-      handling 100K+ monthly requests at 99.7%+ success rate.
+      running enterprise-grade services at 99.95% uptime.
     </p>
     <div class="cta-group">
       <a class="btn primary" href="#projects">View work →</a>
@@ -715,7 +689,6 @@
   </div>
 </header>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="container">
     <div class="section-head reveal">
@@ -732,20 +705,22 @@
         <p>
           I built <strong>OneVigil</strong> from the ground up — a highly configurable background
           verification platform now serving enterprise banking clients. Along the way I integrated
-          <code>40+ verification APIs</code>, designed a no-code workflow engine that eliminated manual
+          <code>100+ verification APIs</code>, designed a no-code workflow engine that eliminated manual
           customer-journey setup entirely, and optimized one banking client's throughput by
           <code>800%+</code> while cutting infrastructure cost by <code>60%</code>.
         </p>
         <p>
           I care about: clean API design, observable systems, retry-safe distributed flows,
-          and code that's easy for the next engineer to read. Outside work, I sharpen
-          fundamentals on LeetCode — <strong>500+ problems solved</strong>.
+          and code that's easy for the next engineer to read. Outside work, I built
+          <strong>LearnHouse</strong> — owning the complete backend for a learning management
+          platform — and sharpen fundamentals on LeetCode (<strong>500+ problems solved</strong>).
+          Currently pursuing an <strong>M.Tech in AI &amp; ML at IIT Patna</strong> to deepen
+          my machine-learning foundations.
         </p>
       </div>
       <aside class="stats-card reveal">
         <div class="stat"><span class="stat-label">years_shipping</span><span class="stat-value">4+</span></div>
-        <div class="stat"><span class="stat-label">apis_integrated</span><span class="stat-value">40+</span></div>
-        <div class="stat"><span class="stat-label">monthly_requests</span><span class="stat-value">100K+</span></div>
+        <div class="stat"><span class="stat-label">apis_integrated</span><span class="stat-value">100+</span></div>
         <div class="stat"><span class="stat-label">uptime_sla</span><span class="stat-value">99.95%</span></div>
         <div class="stat"><span class="stat-label">throughput_gain</span><span class="stat-value">800%↑</span></div>
         <div class="stat"><span class="stat-label">leetcode_solved</span><span class="stat-value">500+</span></div>
@@ -754,7 +729,6 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="container">
     <div class="section-head reveal">
@@ -767,9 +741,10 @@
         <div class="exp-role">Senior Member of Technical Team — SDE-2</div>
         <div class="exp-company">@ Perfios Software Solutions</div>
         <ul class="exp-list">
+          <li><strong>Built OneVigil from scratch:</strong> A configurable background verification platform with dynamic workflows, dashboards &amp; reporting for enterprise clients.</li>
+          <li><strong>Workflow Automation:</strong> Designed a no-code/low-code config system, dropping manual setup dependency from 100% → 0%.</li>
           <li><strong>Architecture Optimization:</strong> Improved system throughput by <strong>800%+</strong> and reduced infrastructure costs by <strong>60%</strong> for a major banking client.</li>
           <li><strong>AI + Prompt Engineering:</strong> Built OCR pipelines in DIB (Document Intelligence Backend) using prompt engineering + FastAPI for structured data extraction.</li>
-          <li><strong>Core Product Modules:</strong> Owned Bank Statement Analyzer, PAN Profile, and Advanced Employment Verification systems.</li>
           <li><strong>Reliability:</strong> Implemented TTL-based data purging and maintained <strong>99.95% uptime</strong> in production.</li>
         </ul>
       </div>
@@ -778,17 +753,15 @@
         <div class="exp-role">Software Development Engineer 1</div>
         <div class="exp-company">@ Karza Technologies (now Perfios)</div>
         <ul class="exp-list">
-          <li><strong>Built OneVigil from scratch:</strong> A configurable background verification platform with dynamic workflows, dashboards & reporting for enterprise clients.</li>
-          <li><strong>API Integration at scale:</strong> Integrated 40+ verification APIs — employment, litigation, DigiLocker, OCR-based KYC, bank statement analysis.</li>
-          <li><strong>Workflow Automation:</strong> Designed a no-code/low-code config system, dropping manual setup dependency from 100% → 0%.</li>
-          <li><strong>Backend at scale:</strong> Python + FastAPI + MongoDB services handling <strong>100K+ monthly requests</strong> at 99.7%+ success.</li>
+          <li><strong>Core Product Modules:</strong> Integrated and maintained Bank Statement Analyzer, PAN Profile, and Advanced Employment Verification systems.</li>
+          <li><strong>API Integration at scale:</strong> Integrated 100+ verification APIs — employment, litigation, DigiLocker, OCR-based KYC, bank statement analysis.</li>
+          <li><strong>Backend at scale:</strong> Built Python + FastAPI + MongoDB services running at <strong>99.7%+ success rate</strong> in production.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="container">
     <div class="section-head reveal">
@@ -801,7 +774,6 @@
         <div class="skill-tags">
           <span class="tag">Python</span>
           <span class="tag">C / C++</span>
-          <span class="tag">Java</span>
           <span class="tag">SQL</span>
         </div>
       </div>
@@ -820,26 +792,37 @@
         <div class="skill-tags">
           <span class="tag">MongoDB</span>
           <span class="tag">PostgreSQL</span>
+          <span class="tag">Redis</span>
         </div>
       </div>
       <div class="skill-card reveal">
-        <h4>Cloud / DevOps</h4>
+        <h4>AWS</h4>
         <div class="skill-tags">
-          <span class="tag">AWS EC2</span>
-          <span class="tag">AWS S3</span>
-          <span class="tag">AWS Lambda</span>
-          <span class="tag">Docker</span>
-          <span class="tag">CI / CD</span>
+          <span class="tag">EC2</span>
+          <span class="tag">S3</span>
+          <span class="tag">Lambda</span>
+          <span class="tag">SQS</span>
+          <span class="tag">RDS</span>
           <span class="tag">Serverless</span>
         </div>
       </div>
       <div class="skill-card reveal">
-        <h4>Tools</h4>
+        <h4>DevOps / Infra</h4>
+        <div class="skill-tags">
+          <span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">CI / CD</span>
+          <span class="tag">GitHub Actions</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4>Tools / VCS</h4>
         <div class="skill-tags">
           <span class="tag">Git</span>
-          <span class="tag">JIRA</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">GitLab</span>
           <span class="tag">Bitbucket</span>
-          <span class="tag">GitHub Actions</span>
+          <span class="tag">JIRA</span>
         </div>
       </div>
       <div class="skill-card reveal">
@@ -847,15 +830,17 @@
         <div class="skill-tags">
           <span class="tag">System Design</span>
           <span class="tag">Distributed Systems</span>
+          <span class="tag">Async Processing</span>
           <span class="tag">DSA</span>
+          <span class="tag">GenAI</span>
           <span class="tag">Prompt Engineering</span>
+          <span class="tag">Web Scraping</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="container">
     <div class="section-head reveal">
@@ -872,12 +857,29 @@
         <h4>OneVigil — Verification Platform</h4>
         <p>Built from scratch: a highly configurable background verification platform with dynamic workflows, dashboards & reporting for enterprise banking clients.</p>
         <div class="proj-stats">
-          <div class="proj-stat"><strong>40+</strong>APIs integrated</div>
-          <div class="proj-stat"><strong>100K+</strong>monthly requests</div>
-          <div class="proj-stat"><strong>99.7%</strong>success rate</div>
+          <div class="proj-stat"><strong>100+</strong>APIs integrated</div>
+          <div class="proj-stat"><strong>99.95%</strong>uptime SLA</div>
+          <div class="proj-stat"><strong>Enterprise</strong>banking</div>
         </div>
         <div class="proj-tech">
           <span>Python</span><span>FastAPI</span><span>MongoDB</span><span>AWS</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="proj-head">
+          <span class="proj-icon">◎</span>
+          <span class="proj-link">PRODUCTION · ASYNC</span>
+        </div>
+        <h4>Discover — Background Verification Product</h4>
+        <p>A unified background verification product serving <strong>HR onboarding</strong> and <strong>lending verification</strong> use cases. Orchestrates 40+ downstream verification APIs in parallel and generates a consolidated async report with risk scores, red flags, and decision signals.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><strong>40+</strong>APIs orchestrated</div>
+          <div class="proj-stat"><strong>Async</strong>report engine</div>
+          <div class="proj-stat"><strong>HR + Lending</strong>verticals</div>
+        </div>
+        <div class="proj-tech">
+          <span>Python</span><span>FastAPI</span><span>MongoDB</span><span>AWS SQS</span><span>Async</span>
         </div>
       </article>
 
@@ -932,20 +934,32 @@
         </div>
       </article>
 
+    </div>
+  </div>
+</section>
+
+<section id="personal">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-num">05 //</span>
+      <h3>Personal Projects</h3>
+    </div>
+    <div class="projects-grid">
+
       <article class="project-card reveal">
         <div class="proj-head">
-          <span class="proj-icon">▤</span>
-          <span class="proj-link">MODULE</span>
+          <span class="proj-icon">◈</span>
+          <span class="proj-link">SOLO · BACKEND OWNER</span>
         </div>
-        <h4>Bank Statement Analyzer</h4>
-        <p>End-to-end module that parses, classifies, and extracts financial insights from raw bank statements — powering lending decisions across multiple banks.</p>
+        <h4>LearnHouse — LMS Backend</h4>
+        <p>Independently engineered the complete backend for a learning management platform. Designed REST APIs, database models &amp; migrations, JWT-based auth flows, event handling, and Docker-based orchestration — built for scalability, modularity, and clean separation of concerns.</p>
         <div class="proj-stats">
-          <div class="proj-stat"><strong>Multi-bank</strong>support</div>
-          <div class="proj-stat"><strong>Fintech</strong>grade</div>
-          <div class="proj-stat"><strong>Real-time</strong>analysis</div>
+          <div class="proj-stat"><strong>Solo</strong>backend owner</div>
+          <div class="proj-stat"><strong>Modular</strong>architecture</div>
+          <div class="proj-stat"><strong>JWT</strong>auth flows</div>
         </div>
         <div class="proj-tech">
-          <span>Python</span><span>Pandas</span><span>OCR</span>
+          <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Alembic</span><span>Docker</span>
         </div>
       </article>
 
@@ -955,14 +969,14 @@
           <span class="proj-link">ALGORITHMS</span>
         </div>
         <h4>500+ LeetCode Problems</h4>
-        <p>Consistent practice across DSA — arrays, graphs, DP, system design problems. Sharpening fundamentals one problem at a time.</p>
+        <p>Consistent practice across DSA — arrays, graphs, dynamic programming, and system-design problems. Sharpening fundamentals one problem at a time.</p>
         <div class="proj-stats">
           <div class="proj-stat"><strong>500+</strong>solved</div>
           <div class="proj-stat"><strong>DSA</strong>focus</div>
           <div class="proj-stat"><strong>Daily</strong>practice</div>
         </div>
         <div class="proj-tech">
-          <span>C++</span><span>Python</span><span>Java</span>
+          <span>C++</span><span>Python</span>
         </div>
       </article>
 
@@ -970,16 +984,21 @@
   </div>
 </section>
 
-<!-- EDU + ACHIEVEMENTS -->
 <section>
   <div class="container">
     <div class="section-head reveal">
-      <span class="section-num">05 //</span>
+      <span class="section-num">06 //</span>
       <h3>Education & Recognition</h3>
     </div>
     <div class="two-col">
       <div class="info-card reveal">
         <h4>Education</h4>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+          <span style="font-family: var(--mono); font-size: 10px; padding: 3px 8px; background: rgba(0,255,157,0.1); color: var(--accent); border: 1px solid var(--accent); border-radius: 3px; letter-spacing: 0.05em;">ONGOING</span>
+        </div>
+        <div class="big">M.Tech, Artificial Intelligence &amp; Machine Learning</div>
+        <div class="sub">IIT Patna · Executive Program · Jun 2026 – Apr 2028</div>
+        <div style="height: 1px; background: var(--line); margin: 20px 0;"></div>
         <div class="big">B.Tech, Electrical Engineering</div>
         <div class="sub">Jadavpur University · 2018 – 2022</div>
         <div class="sub" style="color: var(--accent);">CGPA: 7.8</div>
@@ -996,10 +1015,9 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact">
   <div class="container">
-    <div class="contact-label reveal">// 06 — let's talk</div>
+    <div class="contact-label reveal">// 07 — let's talk</div>
     <h3 class="reveal">Got a problem worth solving?</h3>
     <p class="reveal">
       Whether it's a scaling headache, an API to architect, or a fintech idea
@@ -1023,7 +1041,6 @@
 </footer>
 
 <script>
-  // Smooth fade-in on scroll
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
