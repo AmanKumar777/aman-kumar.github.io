@@ -634,6 +634,23 @@
     opacity: 1;
     transform: translateY(0);
   }
+  .hackathon-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 3px 8px;
+    background: rgba(255, 189, 46, 0.12);
+    color: #ffbd2e;
+    border: 1px solid rgba(255, 189, 46, 0.3);
+    border-radius: 3px;
+    letter-spacing: 0.05em;
+  }
+  .hackathon-badge::before {
+    content: '🏆';
+    font-size: 10px;
+  }
 </style>
 </head>
 <body>
@@ -965,6 +982,26 @@
 
       <article class="project-card reveal">
         <div class="proj-head">
+          <span class="proj-icon">⬡</span>
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px;">
+            <span class="proj-link">HACKATHON · TOP 5</span>
+            <span class="hackathon-badge">Internal Hackathon</span>
+          </div>
+        </div>
+        <h4>PSB Tender Crawler &amp; Alert System</h4>
+        <p>Automated RFP/tender discovery platform that monitors tender portals of <strong>9 Public Sector Banks</strong>, extracts structured opportunity data, filters by client-specific criteria, and dispatches curated email alerts on a daily cron schedule — eliminating manual tracking entirely.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><strong>9</strong>PSBs monitored</div>
+          <div class="proj-stat"><strong>Daily</strong>cron crawls</div>
+          <div class="proj-stat"><strong>0</strong>manual effort</div>
+        </div>
+        <div class="proj-tech">
+          <span>Python</span><span>BeautifulSoup</span><span>Selenium</span><span>Cron</span><span>SMTP</span><span>PostgreSQL</span><span>Pandas</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="proj-head">
           <span class="proj-icon">⬢</span>
           <span class="proj-link">ALGORITHMS</span>
         </div>
@@ -1007,8 +1044,8 @@
         <h4>Achievements</h4>
         <ul class="achievement-list">
           <li>Scaled banking platform 800%+ traffic</li>
+          <li>Top 5 in internal hackathon — PSB Tender Crawler</li>
           <li>Solved 500+ LeetCode problems</li>
-          <li>Top 5 in internal hackathon</li>
         </ul>
       </div>
     </div>
@@ -1026,9 +1063,9 @@
     <div class="contact-grid reveal">
       <a class="btn primary" href="mailto:singhamanaur777@gmail.com">✉ singhamanaur777@gmail.com</a>
       <a class="btn" href="tel:+919334627691">↳ +91 9334627691</a>
-      <a class="btn" href="https://github.com/" target="_blank" rel="noopener">↗ GitHub</a>
-      <a class="btn" href="https://linkedin.com/" target="_blank" rel="noopener">↗ LinkedIn</a>
-      <a class="btn" href="https://leetcode.com/" target="_blank" rel="noopener">↗ LeetCode</a>
+      <a class="btn" href="https://github.com/AmanKumar777" target="_blank" rel="noopener">↗ GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/aman-kumar-12335a194/" target="_blank" rel="noopener">↗ LinkedIn</a>
+      <a class="btn" href="https://leetcode.com/u/nagwanshiaman/" target="_blank" rel="noopener">↗ LeetCode</a>
     </div>
   </div>
 </section>
